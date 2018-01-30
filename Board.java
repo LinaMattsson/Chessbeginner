@@ -1,4 +1,4 @@
-package chackSpel;
+package chessGame;
 
 public class Board {
     public Piece [][] board;
@@ -26,10 +26,12 @@ public class Board {
     }
     public boolean gameOver(Piece[] w, Piece [] b){
         boolean gameOn;
-        if(w[0]!=null && w[0].y==0){
+        if(w[0]==null && w[1]==null && w[2]==null){
+            System.out.println("Black win");
             gameOn=false;
         }
-        else if(b[0]!=null && b[0].y==7){
+        else if(w[0]==null && w[1]==null && w[2]==null){
+            System.out.println("White win");
             gameOn=false;
         }
         else

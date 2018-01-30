@@ -1,4 +1,4 @@
-package chackSpel;
+package chessGame;
 
 import com.googlecode.lanterna.TerminalFacade;
 import com.googlecode.lanterna.screen.Screen;

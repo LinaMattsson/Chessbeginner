@@ -1,4 +1,4 @@
-package chackSpel;
+package chessGame;
 
 import java.util.Random;
 

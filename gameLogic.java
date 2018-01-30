@@ -1,4 +1,4 @@
-package chackSpel;
+package chessGame;
 
 public class gameLogic {
     Board board=new Board();

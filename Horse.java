@@ -1,6 +1,7 @@
-package chackSpel;
+package chessGame;
 
 public class Horse extends Piece {
+
 
     public Horse(int x, int y, int color) {
         super(x, y, color);
@@ -8,28 +9,44 @@ public class Horse extends Piece {
     }
 
     public Piece[] moveWhiteHorse(Piece[] w, Piece[] b) {
-        if (w[2] != null) {
-            int x = w[2].x;
-            int y = w[2].y;
+        if (w[0] != null) {
+            int x = w[0].x;
+            int y = w[0].y;
             y -= 2;
             x -= 1;
-            w[2].x = x;
-            w[2].y = y;
+            if(x>=0&&x<8&&y>=0&&y<8){
+            w[0].x = x;
+            w[0].y = y;
+            return w;}
+            else{
+                y+=3;
+                x+=3;
+                w[0].x = x;
+                w[0].y = y;
+                return w;
+            }}
 
-            System.out.println("Move white");
-        }
         return w;
     }
 
     public Piece[] moveBlackHourse(Piece[] w, Piece[] b) {
-        if (b[2] != null) {
-            int x = b[2].x;
-            int y = b[2].y;
+        if (b[0] != null) {
+            int x = b[0].x;
+            int y = b[0].y;
             x += 1;
             y += 2;
-            b[2].x = x;
-            b[2].y = y;
-            System.out.println("Move black");
+            if(x>=0&&x<8&&y>=0&&y<8){
+            b[0].x = x;
+            b[0].y = y;
+            return b;
+            }
+            else{
+                y-=3;
+                x-=3;
+                w[0].x = x;
+                w[0].y = y;
+                return b;
+                }
         }
         return b;
     }
